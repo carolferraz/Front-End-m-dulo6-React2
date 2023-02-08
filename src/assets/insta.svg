@@ -1,7 +1,4 @@
-export const Title = () => {
-    return (
-    <div>
-        <svg
+<svg
             aria-label="Instagram"
             color="#fff"
             fill="#fff"
@@ -15,5 +12,3 @@ export const Title = () => {
                 fillRule="evenodd"
             ></path>
         </svg>
-    </div>)
-}
