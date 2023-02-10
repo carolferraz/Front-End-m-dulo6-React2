@@ -1,8 +1,21 @@
-import * as S from "./styles"
+import styled, { css } from "styled-components"
 
-export const Text = (props) => {
-    return <S.TextWrapper {...props}>{props.children} </S.TextWrapper>
-}
+const textCss = css`
+    color: ${(props) => props.color || "#fff"};
+    font-weight: ${(props) => (props.bold ? "bold" : "")};
+    font-family: sans-serif;
+    font-size: ${(props) => props.size || "14px"};
+    margin: ${(props) => props.margin};
+`;
 
-//Usando o spred operator {...props} as propriedades que foram definidas no Text, lá no arquivo app.jsx, são incorporadas e passadas todas para o TextWrapper com o styled. 
+export const Text = styled.span`
+    ${textCss}
+`;
 
+export const TextLink = styled.a`
+    ${textCss}
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+`;

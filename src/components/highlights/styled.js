@@ -1,0 +1,28 @@
+import styled from "styled-components";
+import { Text } from "../../ui/text";
+
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding-left: 50px;
+  margin: 40px 0;
+  width: 100%;
+  max-width: 500px;
+`;
+
+export const HighlightItem = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
+
+export const HighlightText = styled(Text)`
+  margin-top: 10px;
+  overflow: hidden;
+  width: 65px;
+  text-overflow: ellipsis;
+  text-align: center;
+  white-space: nowrap;
+`;
