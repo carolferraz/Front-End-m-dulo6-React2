@@ -2,12 +2,17 @@ import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
   padding-top: 50px;
+  max-width: 975px;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 `;
 
 export const AvatarWrapper = styled.div`
   width: 30%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 `;
 
 export const FollowArea = styled.div`

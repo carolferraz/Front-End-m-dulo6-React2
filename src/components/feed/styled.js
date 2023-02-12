@@ -1,9 +1,18 @@
 import styled from "styled-components";
 
-export const FeedItem = styled.div`
-`
+export const FeedWrapper = styled.div`
+  max-width: 975px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+`;
+
+export const FeedItem = styled.div``;
 
 export const FeedPhoto = styled.img`
-    width: 200px;
-    height: 200px;
-`
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+`;

@@ -2,6 +2,7 @@ import { Navbar } from "./components/navbar/navbar";
 import { Header } from "./components/header/header";
 import { Grid, GridItem } from "./ui/grid/index";
 import { Highlight } from "./components/highlights/highlight";
+import { Feed } from "./components/feed/feed";
 
 
 function App() {
@@ -12,8 +13,8 @@ function App() {
       </GridItem>
       <GridItem>
         <Header />
-        <Feed/>
         <Highlight />
+        <Feed/>
       </GridItem>
     </Grid>
   );

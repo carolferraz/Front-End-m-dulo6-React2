@@ -31,7 +31,7 @@ export const Highlight = (props) => {
         {highlightContentList.map((highlight, index)=>(
           <S.HighlightItem key={index}>
             <Avatar size="small" src={highlight.image} />
-            <S.HighlightText>{highlight.text}</S.HighlightText>
+            <S.HighlightText size="12px">{highlight.text}</S.HighlightText>
           </S.HighlightItem>
         ))}
       </S.Wrapper>

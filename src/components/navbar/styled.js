@@ -15,8 +15,9 @@ export const Box = styled.div`
   display: ${props => props.flex ? "flex" : ""};
   flex-direction: ${props => props.column ? "column" : ""};
   justify-content: ${props => props.spaceBetween ? "space-between" : ""};
+  margin-bottom: 20px;
 `;
 
 export const Navitem = styled.div`
-  margin: 30px 0;
+  margin: 10px;
 `
