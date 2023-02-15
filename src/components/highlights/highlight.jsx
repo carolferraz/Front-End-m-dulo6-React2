@@ -27,14 +27,14 @@ const highlightContentList = [
 export const Highlight = (props) => {
   return (
     <>
-      <S.Wrapper>
+      <S.HighlightWrapper>
         {highlightContentList.map((highlight, index)=>(
           <S.HighlightItem key={index}>
             <Avatar size="small" src={highlight.image} />
             <S.HighlightText size="12px">{highlight.text}</S.HighlightText>
           </S.HighlightItem>
         ))}
-      </S.Wrapper>
+      </S.HighlightWrapper>
     </>
   );
 };

@@ -16,6 +16,7 @@ export const TextLink = styled.a`
     ${textCss}
     text-decoration: none;
     &:hover{
-        text-decoration: underline;
+        text-decoration: ${(props) => props.hoverTextDecoration};
+        cursor: pointer;
     }
 `;

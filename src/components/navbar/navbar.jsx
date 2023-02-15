@@ -3,6 +3,8 @@ import { Title } from "../title";
 import addIcon from "./../../assets/user.png";
 import * as S from "./styled"
 import { Icon } from "../icon";
+import { Button } from "../../ui/button/button";
+import { Text } from "../../ui/text";
 
 const itens = [
   {
@@ -40,6 +42,11 @@ const itens = [
 ];
 
 export const Navbar = (props) => {
+
+  const onClickGoToLoginHandler = () => {
+    props.onClickGoToLogin("Login");
+}
+
   return (
     <>
       <S.NavbarWrapper>
@@ -53,7 +60,13 @@ export const Navbar = (props) => {
             ))}
           </S.Box>
         </S.Box>
+
         <NavItem text="Mais" />
+        <Button background="transparent" onClick={onClickGoToLoginHandler}>
+            <Text color="#fff">
+              Sair
+            </Text>
+          </Button>
       </S.NavbarWrapper>
     </>
   );

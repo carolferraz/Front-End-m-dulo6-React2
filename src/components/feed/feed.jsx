@@ -1,16 +1,22 @@
 import { useState, useEffect } from "react";
 import { fetcher } from "../../services";
+import { Loading } from "../../ui/loading/loading";
 import * as S from "./styled"
 
 
 export const Feed = (props) =>{
 
-    const [item, setItem] = useState([]);
-    
+    const [items, setItems] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+
     useEffect(()=>{
         const makeRequestApi = async () => {
-         const response = await fetcher('photos')
-          setItem(response);
+            setIsLoading(true)
+            const response = await fetcher('photos')
+            setTimeout(()=>{
+                setIsLoading(false)
+                setItems(response);
+            }, "2000")
         }
     
         makeRequestApi()
@@ -19,7 +25,9 @@ export const Feed = (props) =>{
 
     return (
         <S.FeedWrapper>
-            {item.map((item)=>(
+            {isLoading && <Loading/>}
+            
+            {items.map((item)=>(
                 <S.FeedItem key={item.id}>
                     <S.FeedPhoto src={item.urls.small}/>
                 </S.FeedItem>

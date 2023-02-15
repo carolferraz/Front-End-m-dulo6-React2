@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div(() => {
+export const IconWrapper = styled.div((props) => {
   return {
     overflow: "hidden",
+    margin: props.margin,
   };
 });
 
