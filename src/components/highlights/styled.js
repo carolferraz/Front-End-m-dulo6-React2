@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Text } from "../../ui/text";
 
-export const Wrapper = styled.div`
+export const HighlightWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

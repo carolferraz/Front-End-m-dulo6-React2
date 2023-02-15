@@ -1,11 +1,11 @@
-export const Title = () => {
+export const Title = (props) => {
     return (
     <div>
         <svg
             aria-label="Instagram"
             color="#fff"
             fill="#fff"
-            height="29"
+            height={props.height}
             viewBox="32 4 113 32"
         >
             <path

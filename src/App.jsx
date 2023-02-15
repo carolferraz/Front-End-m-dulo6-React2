@@ -1,22 +1,17 @@
-import { Navbar } from "./components/navbar/navbar";
-import { Header } from "./components/header/header";
-import { Grid, GridItem } from "./ui/grid/index";
-import { Highlight } from "./components/highlights/highlight";
-import { Feed } from "./components/feed/feed";
+import React, { useState } from "react";
+import Home  from "./pages/Home/Home";
+import Login  from "./pages/Login/Login"
 
 
 function App() {
+  const [currentPage, setCurrentPage] = useState("Home");
+  
   return (
-    <Grid>
-      <GridItem>
-        <Navbar />
-      </GridItem>
-      <GridItem>
-        <Header />
-        <Highlight />
-        <Feed/>
-      </GridItem>
-    </Grid>
+  <>
+    {currentPage === "Login" && <Login onClickGoToHome={setCurrentPage}/>}
+    {currentPage === "Home" && <Home onClickGoToLogin={setCurrentPage}/>}
+    {/* {currentPage === "Profile" && <Profile onClickProfile={setCurrentPage}/>} */}
+  </>
   );
 }
 

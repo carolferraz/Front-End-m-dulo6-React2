@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div((props)=>{
+export const AvatarWrapper = styled.div((props)=>{
     return {
         overflow: "hidden",
         borderRadius: "50%",

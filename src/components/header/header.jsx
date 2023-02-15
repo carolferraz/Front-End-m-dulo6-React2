@@ -7,7 +7,8 @@ import addIcon from "./../../assets/user.png";
 import followingIcon from "./../../assets/down-arrow.png";
 import * as S from "./styled"
 
-export const Header = () => {
+export const Header = (props) => {
+
   return (
     <S.HeaderWrapper>
       <S.AvatarWrapper>
@@ -19,7 +20,7 @@ export const Header = () => {
           <S.Data >
             <Text margin="4px 10px 0" bold size="16px">@adatechbr</Text>
           </S.Data >
-          <Button>
+          <Button maxWidth="100px">
             <S.Data marginBottom="none" gap="0">
               <Text color="#000">
                 Seguindo
@@ -27,17 +28,17 @@ export const Header = () => {
               <Icon width="10px" height="10px" src={followingIcon}></Icon>
             </S.Data>
           </Button>
-          <Button>
+          <Button maxWidth="100px">
             <Text color="#000">
               Seguidores
             </Text>
           </Button>
-          <Button>
+          <Button width="35px">
             <Text color="#000"></Text>
             <Icon src={addIcon}></Icon>
           </Button>
-          <Button background="transparent">
-            <Text size="16px" bold color="#fff">
+          <Button background="transparent" width="25px">
+            <Text color="#fff" bold>
               ...
             </Text>
           </Button>
