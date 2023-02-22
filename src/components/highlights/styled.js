@@ -4,12 +4,12 @@ import { Text } from "../../ui/text";
 export const HighlightWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 30px;
   padding-left: 50px;
   margin: 40px 0;
   width: 100%;
-  max-width: 500px;
+  max-width: 925px;
 `;
 
 export const HighlightItem = styled.div`

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Avatar } from "../avatar/avatar";
 import * as S from "./styled";
 
@@ -22,9 +23,39 @@ const highlightContentList = [
     image: "https://via.placeholder.com/90",
     text: "Modelo Educacional",
   },
+  {
+    image: "https://via.placeholder.com/90",
+    text: undefined,
+  },
+  {
+    image: "https://via.placeholder.com/90",
+    text: "",
+  },
 ];
 
+export const changeEmptyDataToNone = (item) => {
+  if (!item.text) {
+    return "NONE";
+  }
+  return item.text;
+}
+
+export const removeInvalidValues = (item)=>{
+  if (item.text === "NONE"){
+    return false
+  } else return true
+}
+
 export const Highlight = (props) => {
+ 
+  const normalizeData = (array) => 
+  array.map(changeEmptyDataToNone)
+    .filter(removeInvalidValues);
+  
+  useEffect(() => {
+    normalizeData(highlightContentList);
+  },[])
+
   return (
     <>
       <S.HighlightWrapper>

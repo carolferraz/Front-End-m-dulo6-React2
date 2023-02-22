@@ -15,4 +15,9 @@ export const FeedPhoto = styled.img`
   width: 300px;
   height: 300px;
   object-fit: cover;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
 `;
